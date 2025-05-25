@@ -1,53 +1,42 @@
-# Laporan Proyek Machine Learning - Nama Anda
+# Laporan Proyek Machine Learning - Rahmah Fauziah
 
 ## Domain Proyek
 
-Pada bagian ini, kamu perlu menuliskan latar belakang yang relevan dengan proyek yang diangkat.
-
-**Rubrik/Kriteria Tambahan (Opsional)**:
-- Jelaskan mengapa dan bagaimana masalah tersebut harus diselesaikan
-- Menyertakan hasil riset terkait atau referensi. Referensi yang diberikan harus berasal dari sumber yang kredibel dan author yang jelas.
-- Format Referensi dapat mengacu pada penulisan sitasi [IEEE](https://journals.ieeeauthorcenter.ieee.org/wp-content/uploads/sites/7/IEEE_Reference_Guide.pdf), [APA](https://www.mendeley.com/guides/apa-citation-guide/) atau secara umum seperti [di sini](https://penerbitdeepublish.com/menulis-buku-membuat-sitasi-dengan-mudah/)
-- Sumber yang bisa digunakan [Scholar](https://scholar.google.com/)
+Rumah merupakan bangunan yang memiliki fungsi sebagai tempat tinggal atau hunian makhluk hidup. Dapat dikatakan bahwa rumah menjadi salah satu kebutuhan pokok bagi semua orang. Namun, seiring dengan perkembangan zaman, harga rumah semakin mengalami peningkatan setiap tahunnya. Kecenderungan akan peningkatan harga rumah sulit untuk diprediksi terutama dipengaruhi oleh beberapa faktor seperti lokasi, struktur fisik, dan faktor pendukung lainnya [1]. 
+Keadaan ini dapat menjadi tantangan tersendiri terutama bagi calon pembeli dalam memperkirakan harga rumah yang sesuai dengan faktor spesifikasi yang dimiliki. Dalam hal ini, ketidaksesuaian dalam memprediksi harga rumah dapat menimbulkan kerugian. Salah satu kerugian yang dapat dialami seperti harga rumah yang cenderung lebih mahal dengan spesifikasi yang kurang mumpuni. Untuk itu, diperlukan solusi yang dapat memperkirakan harga rumah secara efektif dan efisien. Prediksi tersebut dapat didasari pada spesifikasi rumah seperti luas bangunan, jumlah kamar mandi, jumlah kamar tidur, dan spesifikasi lainnya [2]. 
+Untuk mengatasi permasalahan tersebut, proyek ini dibangun dengan memanfaatkan Machine Learning melalui algoritma Random Forest, K-Nearest Neighbor (KNN), dan algoritma Boosting. Proyek ini diharapkan dapat membantu pengguna baik penjual dan pembeli dalam menentukan keputusan terkait dengan harga rumah yang akurat.
 
 ## Business Understanding
 
-Pada bagian ini, kamu perlu menjelaskan proses klarifikasi masalah.
-
-Bagian laporan ini mencakup:
-
 ### Problem Statements
-
-Menjelaskan pernyataan masalah latar belakang:
-- Pernyataan Masalah 1
-- Pernyataan Masalah 2
-- Pernyataan Masalah n
+- Fitur apa saja yang berpengaruh besar terhadap harga rumah?
+- Bagaimana cara untuk melakukan prediksi harga rumah berdasarkan fitur luas bangunan, jumlah kamar mandi, jumlah kamar tidur, dan fitur lainnya?
 
 ### Goals
+- Mengetahui fitur yang mempengaruhi harga rumah.
+- Membangun model Machine Learning yang dapat memprediksi harga rumah dengan akurat berdasarkan fitur yang dimiliki.
 
-Menjelaskan tujuan dari pernyataan masalah:
-- Jawaban pernyataan masalah 1
-- Jawaban pernyataan masalah 2
-- Jawaban pernyataan masalah n
-
-Semua poin di atas harus diuraikan dengan jelas. Anda bebas menuliskan berapa pernyataan masalah dan juga goals yang diinginkan.
-
-**Rubrik/Kriteria Tambahan (Opsional)**:
-- Menambahkan bagian “Solution Statement” yang menguraikan cara untuk meraih goals. Bagian ini dibuat dengan ketentuan sebagai berikut: 
-
-    ### Solution statements
-    - Mengajukan 2 atau lebih solution statement. Misalnya, menggunakan dua atau lebih algoritma untuk mencapai solusi yang diinginkan atau melakukan improvement pada baseline model dengan hyperparameter tuning.
-    - Solusi yang diberikan harus dapat terukur dengan metrik evaluasi.
+### Solution Statement
+Untuk mencapai tujuan tersebut, solusi yang digunakan dalam membangun model prediksi yaitu memanfaatkan beberapa algoritma yang akan diukur melalui metrik evaluasi MSE (Mean Squared Error) berikut ini:
+- K-Nearest Neighbor : mengaplikasikan kemiripan fitur dalam memprediksi nilai pada suatu data.
+- Random Forest : model machine learning termasuk ke dalam kategori ensemble atau model prediksi erdiri dari beberapa model dan bekerja secara bersama-sama.
+- Algoritma Boosting : model dilatih secara berurutan atau dalam proses yang iteratif.
 
 ## Data Understanding
-Paragraf awal bagian ini menjelaskan informasi mengenai data yang Anda gunakan dalam proyek. Sertakan juga sumber atau tautan untuk mengunduh dataset. Contoh: [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/Restaurant+%26+consumer+data).
+Data yang digunakan dalam proyek ini adalah [House Price Prediction Dataset](https://www.kaggle.com/datasets/zafarali27/house-price-prediction-dataset?resource=download) diperoleh dari platform Kaggle. Dataset ini memiliki jumlah 2.000 data yang berkaitan dengan rumah mewakili 9 fitur yaitu luas bangunan, kamar tidur, kamar mandi, jumlah lantai, tahun dibangun, lokasi, kondisi, garasi, dan harga.
 
-Selanjutnya uraikanlah seluruh variabel atau fitur pada data. Sebagai contoh:  
+### Variabel-variabel pada House Price Prediction Dataset adalah sebagai berikut:
+- Area: merupakan luas bangunan dalam meter persegi.
+- Bedrooms : merupakan jumlah kamar tidur dalam rumah.
+- Bathrooms: merupakan jumlah kamar mandi dalam rumah.
+- Floors: merupakan jumlah lantai dalam rumah.
+- Year Built: merupakan tahun rumah dibangun.
+- Location: merupakan lokasi rumah seperti pusat kota, daerah perkotaan, daerah pinggiran kota, dan pedesaan.
+- Condition: merupakan kondisi rumah seperti sangat baik, baik, cukup, dan buruk.
+- Garage: merupakan ketersediaan garasi dalam setiap rumah.
+- Price: merupakan variabel target jual rumah dalam satuan USD.
 
-### Variabel-variabel pada Restaurant UCI dataset adalah sebagai berikut:
-- accepts : merupakan jenis pembayaran yang diterima pada restoran tertentu.
-- cuisine : merupakan jenis masakan yang disajikan pada restoran.
-- dst
+### Visualisasi Data atau Exploratory Data Analysis
 
 **Rubrik/Kriteria Tambahan (Opsional)**:
 - Melakukan beberapa tahapan yang diperlukan untuk memahami data, contohnya teknik visualisasi data atau exploratory data analysis.
@@ -85,3 +74,7 @@ _Catatan:_
 - _Anda dapat menambahkan gambar, kode, atau tabel ke dalam laporan jika diperlukan. Temukan caranya pada contoh dokumen markdown di situs editor [Dillinger](https://dillinger.io/), [Github Guides: Mastering markdown](https://guides.github.com/features/mastering-markdown/), atau sumber lain di internet. Semangat!_
 - Jika terdapat penjelasan yang harus menyertakan code snippet, tuliskan dengan sewajarnya. Tidak perlu menuliskan keseluruhan kode project, cukup bagian yang ingin dijelaskan saja.
 
+**Referensi:**
+
+[1]	Warjiyono, A. Nur Rais, I. Alfarobi, S. Wira Hadi, and W. Kurniawan, “Analisa Prediksi Harga Jual Rumah Menggunakan Algoritma Random Forest Machine Learning,” _JURSISTEKNI (Jurnal Sist. Inf. dan Teknol. Informasi)_, vol. 6, no. 2, pp. 416–423, 2024.
+[2]	M. L. Mu’tashim, T. Muhayat, S. A. Damayanti, H. N. Zaki, and R. Wirawan, “Analisis Prediksi Harga Rumah Sesuai Spesifikasi Menggunakan Multiple Linear Regression,” _Inform.  J. Ilmu Komput._, vol. 17, no. 3, p. 238, 2021, doi: 10.52958/iftk.v17i3.3635.
