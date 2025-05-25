@@ -36,11 +36,57 @@ Data yang digunakan dalam proyek ini adalah [House Price Prediction Dataset](htt
 - Garage: merupakan ketersediaan garasi dalam setiap rumah.
 - Price: merupakan variabel target jual rumah dalam satuan USD.
 
-### Visualisasi Data atau Exploratory Data Analysis
+### Exploratory Data Analysis
+1. Exploratory Data Analysis - Deskripsi Variabel
+   - Tipe data numerik meliputi: Id, Area, Bedrooms, Bathrooms, Floors, YearBuilt, dan Price.
+   - Tipe data kategorikal meliputi: Location, Condition, dan Garage.
+     
+     ![image](https://github.com/user-attachments/assets/f3e7f1ab-a5c2-4bb9-a2b4-33054b9dfaa8)
 
-**Rubrik/Kriteria Tambahan (Opsional)**:
-- Melakukan beberapa tahapan yang diperlukan untuk memahami data, contohnya teknik visualisasi data atau exploratory data analysis.
+   - Adapun deskripsi pada data numerik meliputi count, mean, std, min, 25%, 50%, 75%, dan max berikut ini.
 
+      ![image](https://github.com/user-attachments/assets/bbdaf2d4-b6ff-4b4e-baca-5a9ca4d3c88a)
+
+2. Exploratory Data Analysis - Menangani Missing Value dan Outliers
+   - Pada data ini tidak ada nilai yang kosong dan tidak ada outlier. Adapun visualisasi untuk mengetahui ada outlier atau tidak berikut.
+
+     ![image](https://github.com/user-attachments/assets/20c63f2a-0c40-4ba9-9590-689feef6b733)
+
+3. Exploratory Data Analysis - Univariate Analysis
+   Pada tahap ini melakukan analisis data terhadap fitur yang ada, untuk fitur kategorikal salah satunya:
+   
+   ![image](https://github.com/user-attachments/assets/6c202695-d8a3-484f-8b8c-c2b1cdf40a21)
+
+   - Gambar diatas menunjukkan data kategorikal pada fitur lokasi. Terdapat 4 kategori pada fitur lokasi yaitu Downtown, Urban, Suburban, dan Rural. Dalam persentase ditunjukkan bahwa lebih dari 50% lokasi rumah yang banyak diminati pada lokasi Downtown dan Urban.
+   Adapun pada fitur numerik di bawah ini:
+
+  ![image](https://github.com/user-attachments/assets/5ef12031-4ca2-4d96-9e96-b54402b072d4)
+
+  ![image](https://github.com/user-attachments/assets/38422f6d-358f-40fc-ac5e-784be66b30e2)
+
+  ![image](https://github.com/user-attachments/assets/172c2b76-0b35-4c7d-95aa-46782df171d8)
+
+   - Gambar diatas menunjukkan visualisasi distribusi pada data numerik. Dapat diketahui bahwa sebagian besar harga rumah berada dalam kisaran yang lebih rendah. Rentang harga rumah yang cukup tinggi sekitar 1.000.000 USD. Untuk fitur Bedrooms, Bathrooms, dan Floors rentang nilai antar satu kategori dengan kategori lainnya tidak jauh berbeda.
+     
+4. Exploratory Data Analysis - Multivariate Analysis
+   Pada tahap ini menunjukkan hubungan antara dua variabel. Adapun untuk fitur kategorikal:
+
+   ![image](https://github.com/user-attachments/assets/9490337d-d314-4423-b0c5-b40f72b2f5de)
+
+   ![image](https://github.com/user-attachments/assets/f003cc5d-6811-4a03-ad56-5000c94fa0ad)
+
+   ![image](https://github.com/user-attachments/assets/6923b081-e16d-44a3-ba47-2f898a9fea0c)
+
+   - Gambar diatas menunjukkan visualisasi rata-rata Price terhadap fitur Location, Condition, dan Garage pada data kategorikal. Pada fitur Location, rentang harga setiap kategori hampir mirip yaitu kisaran 500.000 - 600.000 USD. Adapun kategori yang memiliki harga yang rendah yaitu Location Urban. Sama halnya dengan fitur Location, pada fitur Condition memiliki rentang harga yang sama yaitu pada 500.000 - 600.000 USD. Kategori yang memiliki harga tertinggi berada pada Condition Fair. Untuk fitur Garage, masing-masing kategori memiliki harga yang sama sekitar 500.000 USD.
+
+   Adapun untuk fitur numerik pada proses multivariate analysis:
+
+   ![image](https://github.com/user-attachments/assets/1f1b8cff-0d63-4603-9d9f-92dcca397aad)
+
+   - Pada gambar tersebut menunjukkan korelasi antara fitur numerik dengan fitur target (Price). Dapat dilihat pada fitur Area yang di mana sebarannya membentuk pola yang dapat dikatakan bahwa luas bangunan itu mempengaruhi harga. Begitu pun dengan fitur Bedrooms, Bathrooms, Floors, dan YearBuilt yang membentuk pola tertentu sehingga bisa dikatakan bahwa setiap fitur sama-sama mempengaruhi harga rumah.
+   Untuk korelasi matriks:
+
+     
 ## Data Preparation
 Pada bagian ini Anda menerapkan dan menyebutkan teknik data preparation yang dilakukan. Teknik yang digunakan pada notebook dan laporan harus berurutan.
 
@@ -77,4 +123,5 @@ _Catatan:_
 **Referensi:**
 
 [1]	Warjiyono, A. Nur Rais, I. Alfarobi, S. Wira Hadi, and W. Kurniawan, “Analisa Prediksi Harga Jual Rumah Menggunakan Algoritma Random Forest Machine Learning,” _JURSISTEKNI (Jurnal Sist. Inf. dan Teknol. Informasi)_, vol. 6, no. 2, pp. 416–423, 2024.
+
 [2]	M. L. Mu’tashim, T. Muhayat, S. A. Damayanti, H. N. Zaki, and R. Wirawan, “Analisis Prediksi Harga Rumah Sesuai Spesifikasi Menggunakan Multiple Linear Regression,” _Inform.  J. Ilmu Komput._, vol. 17, no. 3, p. 238, 2021, doi: 10.52958/iftk.v17i3.3635.
