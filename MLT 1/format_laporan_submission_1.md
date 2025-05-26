@@ -89,7 +89,7 @@ Data yang digunakan dalam proyek ini adalah [House Price Prediction Dataset](htt
 
    ![image](https://github.com/user-attachments/assets/a24c0a32-897f-42fa-a592-eb3ecdb610bb)
 
-   Untuk korelasi matriks terdapat pada gambar dibawah ini. Dapat dilihat bahwa fitur Area memiliki korelasi yang kuat terhadap Price sebesar 0,3. Sementara untuk fitur No. of Bedrooms memiliki nilai korelasi rendah terhadap Price yaitu sebesar 0,15. Terdapat pula korelasi yang cukup kuat pada fitur Area terhadap fitur No. of Bedrooms sebesar 0,74 yang dapat dikatakan bahwa banyaknya jumlah kamar tidur mempengaruhi luas bangunan rumah.
+   Untuk korelasi matriks terdapat pada gambar dibawah ini. Dapat dilihat bahwa fitur Area memiliki korelasi yang kuat terhadap Price sebesar 0,3. Dapat dikatakan bahwa fitur Area atau luas bangunan memiliki pengaruh terhadap harga rumah. Sementara untuk fitur No. of Bedrooms memiliki nilai korelasi rendah terhadap Price yaitu sebesar 0,15. Terdapat pula korelasi yang cukup kuat pada fitur Area terhadap fitur No. of Bedrooms sebesar 0,74 yang dapat dikatakan bahwa banyaknya jumlah kamar tidur mempengaruhi luas bangunan rumah.
    
    ![image](https://github.com/user-attachments/assets/d40d8f2d-a0d0-49b8-a34c-12c9009ac8a9)
 
