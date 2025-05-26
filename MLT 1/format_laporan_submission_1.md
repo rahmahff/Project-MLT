@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/2c81829e-2c7c-4d07-8058-e0fcccaa063d)# Laporan Proyek Machine Learning - Rahmah Fauziah
+# Laporan Proyek Machine Learning - Rahmah Fauziah
 
 ## Domain Proyek
 
