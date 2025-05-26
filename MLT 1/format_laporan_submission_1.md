@@ -68,6 +68,7 @@ Data yang digunakan dalam proyek ini adalah [House Price Prediction Dataset](htt
      ![image](https://github.com/user-attachments/assets/12df8374-eec5-4b3a-9787-73792bd0f133)
 
 3. Exploratory Data Analysis - Univariate Analysis
+   
    Pada tahap ini melakukan analisis data terhadap fitur yang ada, untuk data kategorikal pada fitur lokasi. Terdapat 6 kategori pada fitur city yaitu Mumbai, Kolkata, Bangalore, Chennai, Delhi, dan Hyderabad. Dalam persentase ditunjukkan bahwa lebih dari 40% kota untuk rumah yang banyak diminati pada kota Mumbai dan Kolkata.
    
    ![image](https://github.com/user-attachments/assets/c6ae8a2a-7d60-4794-afde-f9eebd1f3a5d)
@@ -79,6 +80,7 @@ Data yang digunakan dalam proyek ini adalah [House Price Prediction Dataset](htt
   ![image](https://github.com/user-attachments/assets/b2ed47aa-df68-414d-9c15-2f2415293f8d)
      
 4. Exploratory Data Analysis - Multivariate Analysis
+   
    Pada tahap ini menunjukkan hubungan antara dua variabel. Gambar dibawah ini menunjukkan visualisasi rata-rata Price terhadap fitur City dan Location. Pada fitur City, rumah yang memiliki harga tinggi berada pada kota Mumbai dan Delhi. Pada fitur Location diambil 10 data lokasi yang di mana harga meningkat berdasarkan lokasi dari rumah.
 
    ![image](https://github.com/user-attachments/assets/4e2e65ac-4b42-4d3a-bea5-0a459168c71e)
