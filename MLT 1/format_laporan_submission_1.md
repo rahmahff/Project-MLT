@@ -140,6 +140,16 @@ Pada formula MSE tersebut, di mana N menunjukkan jumlah dataset. Untuk yi sebaga
 
 ![image](https://github.com/user-attachments/assets/c998c607-b73c-491a-b643-adfeeee2da33)
 
+Adapun untuk plot metriknya:
+
+![image](https://github.com/user-attachments/assets/1b4b8bb5-1030-4fb5-a4ff-0be1bf832606)
+
+Dapat ditinjau pada plot metriks diatas bahwa model Random Forest memiliki error training paling kecil dibandingkan dengan model pada algoritma lainnya. Namun, error testing yang paling kecil ada pada model algoritma Boosting, sehingga model Boosting dipilih sebagai algoritma untuk memprediksi harga rumah. Berdasarkan hal tersebut dilakukan prediksi dengan hasil:
+
+![image](https://github.com/user-attachments/assets/4a6cc695-4edf-4cb6-b2e5-7611cbcd8cad)
+
+Dapat terlihat bahwa model algoritma Boosting yang mendekati dengan nilai y_true pada hasil prediksi tersebut.
+
 **Referensi:**
 
 [1]	Warjiyono, A. Nur Rais, I. Alfarobi, S. Wira Hadi, and W. Kurniawan, “Analisa Prediksi Harga Jual Rumah Menggunakan Algoritma Random Forest Machine Learning,” _JURSISTEKNI (Jurnal Sist. Inf. dan Teknol. Informasi)_, vol. 6, no. 2, pp. 416–423, 2024.
