@@ -235,11 +235,11 @@ Tahap ini dilakukan untuk mengetahui performa model yang dilatih. Metrik evaluas
 
 Pada formula MSE tersebut, di mana N menunjukkan jumlah dataset. Untuk `yi` sebagai nilai sebenarnya dan `y_pred` adalah nilai prediksi. Selain itu, dapat ditinjau bahwa gambar dibawah ini merupakan hasil proyek berdasarkan metrik evaluasi pada data latih dan data test berdasarkan algoritma yang digunakan yaitu KNN, Random Forest, dan Boosting. Nilai MSE tidak dilakukan penskalaan sehingga masih dalam format satuan asli. Berikut hasil evaluasi model berdasarkan nilai MSE menggunakan algoritma KNN, Random Forest, dan Boosting pada data latih dan data uji pada masing-masing algoritma:
 
-|           | Train MSE           | Test MSE            |
-|-----------|---------------------|---------------------|
-| KNN       | 16840339303.812019  | 26224980016.413128  |
-| RF        | 9613303955.776796   | 30023670100.653316  |
-| Boosting  | 18904264506.932152  | 25418562295.376263  |
+|           | Train MSE             | Test MSE              |
+|-----------|-----------------------|-----------------------|
+| KNN       | 16840339303812.019531 | 26224980016413.128906 |
+| RF        | 9613303955776.796875  | 30023670100653.316406 |
+| Boosting  | 18904264506932.152344 | 25418562295376.261719 |
 
 Adapun untuk plot metriknya yang menginterpretasikan hasil evaluasi ketiga model algoritma melalui plot metrik menggunakan bar chart. Pada model Random Forest (RF) menunjukkan nilai error terkecil pada data train, menunjukkan bahwa model dapat mempelajari pola data latih dengan baik. Untuk data test, model Boosting memiliki error paling rendah, sehingga menunjukkan bahwa model ini memiliki kemampuan generalisasi yang lebih baik. Pada model KNN menunjukkan error yang cukup tinggi pada data train maupun test. Model terbaik yang dipilih untuk membantu memprediksi harga rumah yaitu model algoritma Boosting.
 
