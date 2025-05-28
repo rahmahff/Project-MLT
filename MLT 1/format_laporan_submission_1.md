@@ -233,7 +233,7 @@ Tahap ini dilakukan untuk mengetahui performa model yang dilatih. Metrik evaluas
 
 ![image](https://github.com/user-attachments/assets/200df7fd-1a3d-4d49-8587-53a2f6c32d61)
 
-Pada formula MSE tersebut, di mana N menunjukkan jumlah dataset. Untuk `yi` sebagai nilai sebenarnya dan `y_pred` adalah nilai prediksi. Selain itu, dapat ditinjau bahwa gambar dibawah ini merupakan hasil proyek berdasarkan metrik evaluasi pada data latih dan data test berdasarkan algoritma yang digunakan yaitu KNN, Random Forest, dan Boosting. Untuk mempermudah proses analisis di mana nilai MSE dibagi dengan 1.000. Berikut hasil evaluasi model berdasarkan nilai MSE menggunakan algoritma KNN, Random Forest, dan Boosting pada data latih dan data uji pada masing-masing algoritma:
+Pada formula MSE tersebut, di mana N menunjukkan jumlah dataset. Untuk `yi` sebagai nilai sebenarnya dan `y_pred` adalah nilai prediksi. Selain itu, dapat ditinjau bahwa gambar dibawah ini merupakan hasil proyek berdasarkan metrik evaluasi pada data latih dan data test berdasarkan algoritma yang digunakan yaitu KNN, Random Forest, dan Boosting. Nilai MSE tidak dilakukan penskalaan sehingga masih dalam format satuan asli. Berikut hasil evaluasi model berdasarkan nilai MSE menggunakan algoritma KNN, Random Forest, dan Boosting pada data latih dan data uji pada masing-masing algoritma:
 
 |           | Train MSE           | Test MSE            |
 |-----------|---------------------|---------------------|
