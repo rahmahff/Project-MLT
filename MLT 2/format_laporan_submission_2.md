@@ -156,33 +156,55 @@ Tahap ini dilakukan melalui pendekatan _Content Based Filtering_.
 ### 1. _Content Based Filtering_
 Tahapan ini adalah melakukan pembangunan model sistem rekomendasi menggunakan pendekatan Content Based Filtering. Pendekatan ini dilakukan untuk mengetahui rekomendasi item yang mirip dengan item yang disukai pengguna yaitu film didasari pada kategori genre. Proses ini diawali dengan TF-IDF Vectorizer untuk melakukan perhitungan idf pada data genres dan mapping array fitur index integer ke fitur nama, melalui fungsi `tfidfvectorizer()` dari library sklearn. Kemudian, melakukan fit dan mentransformasikan dalam bentuk matriks yang menghasilkan keluaran (59047, 20). Hal tersebut menunjukkan bahwa 59047 adalah ukuran data dan 20 merupakan matriks kategori genre. Setelah itu, dilanjutkan dengan mengubah vektor tf-idf dalam bentuk matriks dengan menggunakan fungsi `todense()` dan melakukan pembatasan data hanya 1000 data saja. Dilanjutkan dengan membuat dataframe yang berisikan genre (kolom) dan judul film (baris). Hasil menunjukkan bahwa terdapat korelasi antara judul film dengan genre ditunjukkan adanya output 1.0 seperti:
 
+![image](https://github.com/user-attachments/assets/7881058c-a1a8-4ee0-befc-8fc2557220a2)
 
-
-Terdapat kelebihan dan kekurangan pada pendekatan ini yaitu:
+Dalam hal ini, terdapat kelebihan dan kekurangan pada pendekatan ini yaitu:
 - Kelebihan: dapat memberikan rekomendasi yang personal mengingat tidak bergantung pada pengguna lain.
 - Kekurangan: kurang efektif digunakan untuk rekomendasi item yang berbeda dari yang sudah disukai pengguna.
 
+Dari proses tersebut, dilakukan proses rekomendasi melalui fungsi `def movies_recommendations`, terdiri dari beberapa parameter sebagai berikut:
+- Judul_film: judul_film (index kemiripan dataframe).
+- Similarity_data : Dataframe mengenai similarity yang telah kita definisikan sebelumnya yaitu cosine_sim_df.
+- Items : judul dan genre yang digunakan untuk mendefinisikan kemiripan, dalam hal ini adalah movies_title dan genres.
+- k : Banyak rekomendasi yang ingin diberikan yaitu berjumlah 5.
 
-- Cosine Similarity: menghitung derajat kesamaan (similarity degree) antar restoran dengan teknik cosine similarity pada matrix tf-idf.
+Rekomendasi di uji coba pada film dengan judul Toy Story (1995), didapatkan 5 data teratas yaitu:
 
-Dari proses tersebut didapatkan top-5 film teratas yang mirip dengan Toy Story (1995) yaitu:
 
-| movies_title                      | genres                                                  |
-|-----------------------------------|---------------------------------------------------------|
-| Pagemaster, The (1994)            | Action, Adventure, Animation, Children, Fantasy         |
-| Kids of the Round Table (1995)    | Adventure, Children, Comedy, Fantasy                    |
-| Space Jam (1996)                  | Adventure, Animation, Children, Comedy, Fantasy, Sci-Fi |
-| Jumanji (1995)                    | Adventure, Children, Fantasy                            |
-| NeverEnding Story III, The (1994) | Adventure, Children, Fantasy                            |
+| No | Judul Film                         | Genre                                           |
+|----|------------------------------------|-------------------------------------------------|
+| 0  | Space Jam (1996)                   | Adventure, Animation, Children, Comedy, Fantasy |
+| 1  | Pagemaster, The (1994)             | Action, Adventure, Animation, Children, Fantasy |
+| 2  | Kids of the Round Table (1995)     | Adventure, Children, Comedy, Fantasy            |
+| 3  | NeverEnding Story III, The (1994)  | Adventure, Children, Fantasy                    |
+| 4  | Jumanji (1995)                     | Adventure, Children, Fantasy                    |
+
 
 ## Evaluation
+Tahap ini dilakukan untuk mengetahui hasil evaluasi dari sistem rekomendasi film. Metrik evaluasi yang digunakan yaitu Cosine Similarity yang melakukan pengukuran derajat berdasarkan kesamaan atau seberapa mirip sebuah data. Adapun formula dari metrik evaluasi Cosine Similarity yaitu:
 
-Pada bagian ini Anda perlu menyebutkan metrik evaluasi yang digunakan. Kemudian, jelaskan hasil proyek berdasarkan metrik evaluasi tersebut.
+$$
+\cos(\theta) = \frac{A \cdot B}{\|A\| \|B\|}
+$$
 
-Ingatlah, metrik evaluasi yang digunakan harus sesuai dengan konteks data, problem statement, dan solusi yang diinginkan.
+Keterangan:
+- A dan B adalah vektor yang akan dibandingkan kesamaannya.
+- A . B adalah dot product antara kedua vektor A dan B.
+- |A| dan |B| adalah panjang dari vektor A dan B.
+- |A||B| adalah cross product antara |A| dan |B|
 
-**Rubrik/Kriteria Tambahan (Opsional)**: 
-- Menjelaskan formula metrik dan bagaimana metrik tersebut bekerja.
+Proses cosine similarity dilakukan dengan menggunakan kode di bawah ini.
+```
+# Membuat dataframe dari variabel cosine_sim dengan baris dan kolom berupa nama movie
+cosine_sim_df = pd.DataFrame(cosine_sim, index=data['movies_title'][:1000], columns=data['movies_title'][:1000])
+print('Shape:', cosine_sim_df.shape)
+
+# Melihat similarity matrix pada setiap movie
+cosine_sim_df.sample(5, axis=1).sample(10, axis=0)
+```
+Tahapannya dilakukan dengan mengidentifikasi kesamaan antara film yang satu dengan yang lainnya, ditunjukkan dengan memiliki angka 1.0 mengindikasikan bahwa film pada kolom X (horizontal) memiliki kesamaan dengan film pada baris Y (vertikal). Shape yang digunakan berukuran (1000, 1000) seperti:
+
+![image](https://github.com/user-attachments/assets/e95634fa-7ca0-495f-b044-41795eee713f)
 
 ## Referensi
 [1]	M. Fajriansyah, P. P. Adikara, and A. W. Widodo, “Sistem Rekomendasi Film Menggunakan Content Based Filtering,” _J. Pengemb. Teknol. Inf. dan Ilmu Komput._, vol. 5, no. 6, pp. 2188–2199, 2021.
