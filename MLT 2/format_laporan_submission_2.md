@@ -56,6 +56,7 @@ Bentuk tampilan baris pada data movies.csv melalui fungsi `head()` dengan menamp
   | 3       | Grumpier Old Men (1995)            | Comedy, Romance                                 |
   | 4       | Waiting to Exhale (1995)           | Comedy, Drama, Romance                          |
   | 5       | Father of the Bride Part II (1995) | Comedy                                          |
+
 Tabel tersebut menampilkan tiga kolom yaitu movieId, title, dan genres yang berisikan data setiap kolom. Untuk movieId berisikan data nilai unik setiap film, title berisikan judul film dilengkapi dengan tahun perilisannya, dan genres berisikan macam-macam genre dari film dengan dipisahkan oleh tanda (|).
 
 - Data `ratings.csv`
@@ -74,6 +75,7 @@ Bentuk tampilan baris pada data ratings.csv melalui fungsi `head()` dengan menam
   | 1      | 307     | 5.0    | 1147868828  |
   | 1      | 665     | 5.0    | 1147878820  |
   | 1      | 899     | 3.5    | 1147868510  |
+
 Tabel tersebut menampilkan empat kolom yaitu userId, movieId, rating, dan timestamp yang berisikan data setiap kolom. Untuk userId berisikan data nilai unik pengguna, movieId berisikan data nilai unik setiap film, rating berisikan nilai rating yang diberikan pengguna, dan timestamp berisikan waktu pemberian rating.
 
 Pada data ratings.csv dilakukan pengecekan deskripsi statistik data ratings dengan fitur `describe()`. Fungsi describe() memberikan informasi statistik pada masing-masing kolom, antara lain:
