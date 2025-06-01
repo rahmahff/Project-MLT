@@ -46,6 +46,7 @@ Dapat diketahui bahwa jumlah data movies.csv sebanyak 62423 entri dan 3 kolom. T
     - `movieId` merupakan Id film yang bertipe data int64.
     - `title` merupakan judul film yang memiliki tipe data object.
     - `genres` merupakan genre pada film yang memiliki tipe data object.
+      
 Bentuk tampilan baris pada data movies.csv melalui fungsi `head()` dengan menampilkan lima baris pertama berikut ini.
 
   | movieId | Title                              | Genres                                          |
@@ -63,6 +64,7 @@ Dapat diketahui bahwa jumlah data ratings.csv sebanyak 25000095 baris dan 4 kolo
     - `movieId` merupakan Id film bertipe data int64.
     - `rating` merupakan nilai rating film yang bertipe data float64.
     - `timestamp` merupakan waktu pemberian rating yang bertipe data int64.
+      
 Bentuk tampilan baris pada data ratings.csv melalui fungsi `head()` dengan menampilkan lima baris pertama berikut ini.
 
   | userId | movieId | rating | timestamp   |
