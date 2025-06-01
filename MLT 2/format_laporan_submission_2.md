@@ -152,17 +152,20 @@ Sebelum masuk tahap modeling, tahap selanjutnya melakukan pembuatan dictionary u
 ![image](https://github.com/user-attachments/assets/d424c3a4-3ca5-43d5-8e10-ee1892014bf3)
 
 ## Modeling
-Tahap ini dilakukan melalui dua pendekatan yaitu _Content Based Filtering_ dan _Collaborative Filtering_.
+Tahap ini dilakukan melalui pendekatan _Content Based Filtering_.
 ### 1. _Content Based Filtering_
-Tahapan ini adalah melakukan pembangunan model sistem rekomendasi menggunakan pendekatan Content Based Filtering. Pendekatan ini dilakukan untuk mengetahui rekomendasi item yang mirip dengan item yang disukai pengguna. Terdapat kelebihan dan kekurangan pada pendekatan ini yaitu:
+Tahapan ini adalah melakukan pembangunan model sistem rekomendasi menggunakan pendekatan Content Based Filtering. Pendekatan ini dilakukan untuk mengetahui rekomendasi item yang mirip dengan item yang disukai pengguna yaitu film didasari pada kategori genre. Proses ini diawali dengan TF-IDF Vectorizer untuk melakukan perhitungan idf pada data genres dan mapping array fitur index integer ke fitur nama, melalui fungsi `tfidfvectorizer()` dari library sklearn. Kemudian, melakukan fit dan mentransformasikan dalam bentuk matriks yang menghasilkan keluaran (59047, 20). Hal tersebut menunjukkan bahwa 59047 adalah ukuran data dan 20 merupakan matriks kategori genre. Setelah itu, dilanjutkan dengan mengubah vektor tf-idf dalam bentuk matriks dengan menggunakan fungsi `todense()` dan melakukan pembatasan data hanya 1000 data saja. Dilanjutkan dengan membuat dataframe yang berisikan genre (kolom) dan judul film (baris). Hasil menunjukkan bahwa terdapat korelasi antara judul film dengan genre ditunjukkan adanya output 1.0 seperti:
+
+
+
+Terdapat kelebihan dan kekurangan pada pendekatan ini yaitu:
 - Kelebihan: dapat memberikan rekomendasi yang personal mengingat tidak bergantung pada pengguna lain.
 - Kekurangan: kurang efektif digunakan untuk rekomendasi item yang berbeda dari yang sudah disukai pengguna.
 
-Tahap pendekatan ini dilakukan melalui beberapa tahapan yaitu:
-- TF-IDF Vectorizer: digunakan untuk membangun sistem rekomendasi sederhana berdasarkan kategori genres pada film. Teknik ini untuk menemukan representasi fitur penting dari setiap kategori genres. Proses ini menggunakan fungsi `tfidfvectorizer()` dari library sklearn.
+
 - Cosine Similarity: menghitung derajat kesamaan (similarity degree) antar restoran dengan teknik cosine similarity pada matrix tf-idf.
 
-Dari proses tersebut didapatkan top-5 film yang mirip dengan Toy Story (1995) yaitu:
+Dari proses tersebut didapatkan top-5 film teratas yang mirip dengan Toy Story (1995) yaitu:
 
 | movies_title                      | genres                                                  |
 |-----------------------------------|---------------------------------------------------------|
@@ -173,6 +176,7 @@ Dari proses tersebut didapatkan top-5 film yang mirip dengan Toy Story (1995) ya
 | NeverEnding Story III, The (1994) | Adventure, Children, Fantasy                            |
 
 ## Evaluation
+
 Pada bagian ini Anda perlu menyebutkan metrik evaluasi yang digunakan. Kemudian, jelaskan hasil proyek berdasarkan metrik evaluasi tersebut.
 
 Ingatlah, metrik evaluasi yang digunakan harus sesuai dengan konteks data, problem statement, dan solusi yang diinginkan.
